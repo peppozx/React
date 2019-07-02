@@ -33,10 +33,15 @@ const App = () => {
   //   ]
   // );
   return (
-    <div>
-      <h1>Adopt Me!</h1>
-      <SearchParams />
-    </div>
+    /* React.StrictMode gives you additional warnings
+      about things you shouldn't be doing in your code
+    */
+    <React.StrictMode>
+      <div>
+        <h1>Adopt Me!</h1>
+        <SearchParams />
+      </div>
+    </React.StrictMode>
   );
 };
 
@@ -45,5 +50,4 @@ const App = () => {
 //Overwrites everything inside div id="root" element
 
 // render(React.createElement(App), document.getElementById('root'));
-
 render(<App />, document.getElementById('root'));
